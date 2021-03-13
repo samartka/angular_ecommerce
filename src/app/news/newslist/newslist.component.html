@@ -1,0 +1,11 @@
+<div class="card" style="border: 0px;border-top: blue solid 1px; width: 75vw;min-width: 200px;" >
+    <h2>NopCommerce News <button (click)="toggleDetail()" style="float: right; margin-right: 25px;">-</button></h2> 
+</div> 
+<div *ngIf=isOpen>
+    <app-newsitem 
+    *ngFor="let n of newsl"
+        [newsItem]="n"
+    ></app-newsitem>
+</div>
+
+

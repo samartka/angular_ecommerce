@@ -1,0 +1,12 @@
+<div class="card" style="border: 0px;border-top: blue solid 1px; width: 75vw;min-width: 200px;" >
+    <h2>Common Statistics <button (click)="toggleDetail()" style="float: right; margin-right: 25px;">-</button></h2> 
+</div> 
+<div *ngIf=isOpen>
+    <app-stat-item 
+    *ngFor="let s of stats"
+        [stat]="s"
+    ></app-stat-item>
+</div>
+
+
+

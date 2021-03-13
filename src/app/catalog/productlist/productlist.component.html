@@ -1,0 +1,34 @@
+<div class="box">
+
+</div>
+<table class="table" >
+    <thead class="thead-light">
+        <tr>
+            <th><input type="checkbox" class="mastercheckbox"></th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Published</th>
+            <th>Stock</th>
+            <th>Edit</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let p of products">
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>{{p.name}}</td>
+            <td>{{p.full_desc}}</td>
+            <td>{{p.category}}</td>
+            <td>{{p.price}}</td>
+            <td *ngIf="p.publish==true"> <input type="checkbox" checked> </td>
+            <td *ngIf="p.publish!=true"> <input type="checkbox" > </td>
+            <td>{{p.stock}}</td>
+            <td>
+                <a href ="products/{{p.sku}}" class="btn btn-info" role="button" aria-disabled="false">Edit</a>
+
+
+            </td>
+        </tr>
+    </tbody>
+</table>
